@@ -1,5 +1,9 @@
 import './App.css';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import StartButton from './components/Start'
+import ReturnButton from './components/Return'
+import NavBar from './components/Nav'
+import MoveButtons from './components/Movement'
 
 import Map from './components/Map'
 
@@ -10,6 +14,11 @@ function App() {
   return (
     <div>
       <Map center={center} />
+      <StartButton/>
+      <ReturnButton/>
+      <NavBar/>
+      <MoveButtons/>
+
     </div>
   );
 }
