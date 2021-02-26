@@ -6,10 +6,14 @@ import NavBar from './components/Nav'
 import MoveButtons from './components/Movement'
 
 import Map from './components/Map'
+import Quit from './components/Quit';
+import Info from './components/Info';
 
 function App() {
 
   const [center, setCenter] = useState([43.88, -72.7317])
+  const [display, setDisplay] = useState(false);
+  
 
   return (
     <div>
@@ -18,6 +22,19 @@ function App() {
       <ReturnButton/>
       <NavBar/>
       <MoveButtons/>
+      <Quit/> 
+      <button
+      
+      onClick={(evt) => {
+        setDisplay(!display )}} // change !display to true to un toggle
+    >
+      Info
+    </button>
+    
+    {display && <Info/>}
+  
+  
+      
 
     </div>
   );
