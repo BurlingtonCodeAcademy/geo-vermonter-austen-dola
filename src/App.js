@@ -11,18 +11,16 @@ import Info from './components/Info';
 
 function App() {
 
+  const [Coor, setCoor] = useState([])
+
   const [center, setCenter] = useState([43.88, -72.7317])
   const [display, setDisplay] = useState(false);
+  const [rndLocation , setRndLocation]= useState(center)
   
+
 
   return (
     <div>
-      <Map center={center} />
-      <StartButton/>
-      <ReturnButton/>
-      <NavBar/>
-      <MoveButtons/>
-      <Quit/> 
       <button
       
       onClick={(evt) => {
@@ -32,6 +30,12 @@ function App() {
     </button>
     
     {display && <Info/>}
+      <Map Coor={Coor} center={center} location={rndLocation} />
+      <StartButton setCoor={setCoor}/>
+      <ReturnButton/>
+      <NavBar/>
+      <MoveButtons/>
+      <Quit/> 
   
   
       
