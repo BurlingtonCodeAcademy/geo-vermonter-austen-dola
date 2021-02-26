@@ -16,6 +16,7 @@ function App() {
 
   const [center, setCenter] = useState([43.88, -72.7317])
   const [display, setDisplay] = useState(false);
+  const [displayoptions, setDisplayOptions] = useState(false);
   const [rndLocation , setRndLocation]= useState(center)
   
 
