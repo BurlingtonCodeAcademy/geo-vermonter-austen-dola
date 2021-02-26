@@ -1,7 +1,7 @@
 //function for on click 
 
 function pickSpot(){
-    //pick a random spot on the map
+    // pick a random spot on the map
     // return random coordinates 
 }
 
