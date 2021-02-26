@@ -1,13 +1,14 @@
-import './App.css';
-import { useState, useEffect } from 'react'
-import StartButton from './components/Start'
-import ReturnButton from './components/Return'
-import NavBar from './components/Nav'
-import MoveButtons from './components/Movement'
-
-import Map from './components/Map'
-import Quit from './components/Quit';
-import Info from './components/Info';
+import "./App.css";
+import { useState, useEffect } from "react";
+import StartButton from "./components/Start";
+import ReturnButton from "./components/Return";
+import NavBar from "./components/Nav";
+import MoveButtons from "./components/Movement";
+import GuessButton from "./components/GuessButton";
+import Map from "./components/Map";
+import Quit from "./components/Quit";
+import Info from "./components/Info";
+import GuessBox from "./components/GuessBox";
 
 function App() {
 
@@ -40,6 +41,15 @@ function App() {
   
       
 
+      {display && <Info />}
+      <button
+        onClick={(evt) => {
+          setDisplayOptions(!displayoptions);
+        }}
+      >
+        Make a guess
+      </button>
+      {displayoptions && <GuessBox />}
     </div>
   );
 }
