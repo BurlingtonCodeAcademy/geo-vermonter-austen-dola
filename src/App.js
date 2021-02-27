@@ -13,6 +13,7 @@ import GuessBox from "./components/GuessBox";
 function App() {
 
   const [Coor, setCoor] = useState([])
+  const [startPress, setStartPress] = useState(false)
 
   const [center, setCenter] = useState([43.88, -72.7317])
   const [display, setDisplay] = useState(false);
@@ -32,8 +33,8 @@ function App() {
     </button>
     
     {display && <Info/>}
-      <Map Coor={Coor} center={center} location={rndLocation} />
-      <StartButton setCoor={setCoor}/>
+      <Map Coor={Coor} center={center} location={rndLocation} startPress={startPress} />
+      <StartButton setCoor={setCoor} setStartPress={setStartPress}/>
       <ReturnButton/>
       <NavBar/>
       <MoveButtons/>

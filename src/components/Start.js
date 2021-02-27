@@ -9,7 +9,7 @@ import {useState} from 'react'
 
 
 function StartButton(props){
-
+// useEffect to stop looping
 
     function PickSpot(){
 
@@ -49,7 +49,11 @@ function StartButton(props){
         
             
          }
-         if (incArr.length ===1){props.setCoor(mapCoor)}
+         if (incArr.length ===1){
+            mapCoor = [rndLat,rndLong]
+            props.setCoor(mapCoor)
+            props.setStartPress(true)
+    }
     }
 
 
