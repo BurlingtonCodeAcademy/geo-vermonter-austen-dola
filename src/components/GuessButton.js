@@ -1,14 +1,4 @@
-// Pushes to the GuessBox
-// When clicked it should drop down possible answers 
-// function GuessButton(){
-//     return(
-//     <div>
-
-//         <button onClick={(evt) => {
-//         setDisplay(!display )}}>Make a guess</button>
-//     </div>
-//     )
-
-// }
-
-// export default GuessButton
+// When clicked it compares answer to the guess
+// Import Answer and Guess
+// If guess is correct End game
+// Else deduct 10 points 

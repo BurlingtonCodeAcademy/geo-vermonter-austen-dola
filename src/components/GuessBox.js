@@ -1,6 +1,7 @@
 //This is the options box that will pop up when you hit guess.... ADD CANCEL BUTTON IN HERE
 import { useState } from "react";
-function GuessBox() {
+import Answer from './Answer'
+function GuessBox(props) {
   const [picked, setPicked] = useState(null);
   const [selected, setSelected] = useState({});
   function submitForm(evt) {
@@ -22,13 +23,13 @@ function GuessBox() {
     <div>
       <h1>{picked ? ` You Guessed ${picked.county} !` : ""}</h1>
 
-      <form onSubmit={submitForm}>
-       
+      <form onSubmit={submitForm, }>
         <select
           name="county"
           value={selected.county && ""}
           onChange={handleChange}
-        ><option value=""></option>
+        >
+          <option value=""></option>
           <option value="Franklin County">Franklin County</option>
           <option value="Lamoille County">Lamoille County</option>
           <option value="Orange County">Orange County</option>
@@ -44,10 +45,9 @@ function GuessBox() {
           <option value="Caledonia County">Caledonia County</option>
           <option value="Chittenden County">Chittenden County</option>
         </select>
-        <input type="submit" />
+        <input  type="submit" />
       </form>
     </div>
-  );
+  )
 }
-
-export default GuessBox;
+export default GuessBox
