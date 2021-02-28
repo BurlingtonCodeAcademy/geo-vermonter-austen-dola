@@ -10,7 +10,7 @@ body{
   color: black;
   padding: 40px;
   font-family: Arial;
-  text-align: center;
+  
   margin-left: 30%;
   margin-top: 5%
 }
@@ -24,39 +24,70 @@ button:hover{
   width: 100px;
   height: 50px;
   font-size:45px;
-  text-align: center;
+  
 }
 
-#Movements > button{
+.north{
   width: 50px;
   height: 50px;
   display: flex;
+  justify-content: space-around;
   font-size:40px;
   Margin-left: 700px;
-  Margin-top: -15%
+  Margin-top: -10%
 }
+.west{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  font-size:40px;
+  Margin-left: 650px;
+  Margin-top: -4%
+
+}
+.east{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  font-size:40px;
+  Margin-left: 750px;
+  Margin-top: -10%
+}
+
+.south{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  font-size:40px;
+  Margin-left: 700px;
+  Margin-top: -30%
+}
+
 
 #Quit{
   
   width: 100px;
   height: 50px;
   font-size:45px;
-  text-align: center;
-  Margin-left: -160px;
-  margin-top: 580px
+  
+  Margin-left: 500px;
+  margin-top: 260px
 }
 
 
 
 
 #Guess{
-  
   width: 100px;
   height: 50px;
   font-size:20px;
-  text-align: center;
-  margin-left:-650px;
-  Margin-top: -40px
+  
+  Margin-left: 250px;
+  margin-top: -500px
+ 
 }
 
 #Return{
@@ -67,10 +98,10 @@ button:hover{
     width: 115px;
     height: 50px;
     font-size:40px;
-    text-align: center;
+    
     Margin-left: 700px;
   }
 
 #Nav{
-  
+
 }
