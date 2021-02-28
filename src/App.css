@@ -1,38 +1,76 @@
-.App {
+*{
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: red;
+
+}
+body{
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
+  margin-left: 30%;
+  margin-top: 5%
+}
+ 
+
+button:hover{
+  background-color: black;
+}
+#Start{
+  margin-right:1200px;
+  width: 100px;
+  height: 50px;
+  font-size:45px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#Movements > button{
+  width: 50px;
+  height: 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size:40px;
+  Margin-left: 700px;
+  Margin-top: -15%
 }
 
-.App-link {
-  color: #61dafb;
+#Quit{
+  
+  width: 100px;
+  height: 50px;
+  font-size:45px;
+  text-align: center;
+  Margin-left: -160px;
+  margin-top: 580px
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+
+#Guess{
+  
+  width: 100px;
+  height: 50px;
+  font-size:20px;
+  text-align: center;
+  margin-left:-650px;
+  Margin-top: -40px
+}
+
+#Return{
+
+
+    display:flex;
+    justify-content: space-between;
+    width: 115px;
+    height: 50px;
+    font-size:40px;
+    text-align: center;
+    Margin-left: 700px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+#Nav{
+  
 }

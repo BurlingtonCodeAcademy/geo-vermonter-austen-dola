@@ -20,7 +20,7 @@ function GuessBox(props) {
     setSelected(currentGuess);
   }
   return (
-    <div>
+    <div id = "Guess">
       <h1>{picked ? ` You Guessed ${picked.county} !` : ""}</h1>
 
       <form onSubmit={submitForm}>

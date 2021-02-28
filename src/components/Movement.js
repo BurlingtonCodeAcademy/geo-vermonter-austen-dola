@@ -1,4 +1,5 @@
 import {useState} from 'react'
+
 //4 movement buttons
 //lat is H
 //long is V
@@ -30,11 +31,11 @@ const [long,setLong]= useState(LongInput)
 const [lat,setLat]= useState(LatInput)
 
     return(
-        <div>
-            <button onClick={North}>N</button>
-            <button onClick={West}>W</button>
-            <button onClick={East}>E</button>
-            <button onClick={South}>S</button>
+        <div id = "Movements">
+            <button class = "south"onClick={South}>S</button>
+            <button class = "east" onClick={East}>E</button>
+            <button class = "west"onClick={West}>W</button>
+            <button class = "north"onClick={North}>N</button>
         </div>
     )
 }

@@ -12,7 +12,7 @@ function NavBar(){
 
 
     return(
-        <div>
+        <div id = "Nav">
         <button onClick={HighScore} >High Score</button>
         <button onClick={About}>About</button>
         </div>

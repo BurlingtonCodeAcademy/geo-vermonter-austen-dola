@@ -66,7 +66,7 @@ const [stopButton, setstopButton] = useState(false)
      <div>
     
 
-        <button onClick={PickSpot} disabled={stopButton}>Start</button>
+        <button id = "Start" onClick={PickSpot} disabled={stopButton}>Start</button>
     </div>
     )
 

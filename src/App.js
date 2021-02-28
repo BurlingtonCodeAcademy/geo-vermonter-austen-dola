@@ -52,7 +52,7 @@ function App() {
       
 
       {display && <Info />}
-      <button
+      <button id="Guess"
         onClick={(evt) => {
           setDisplayOptions(!displayoptions);
         }}

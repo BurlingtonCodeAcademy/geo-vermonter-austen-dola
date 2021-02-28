@@ -7,7 +7,7 @@ function Quit() {
   // alert(<Info/>)
   return (
     <div>
-      <button onClick={() => window.location.reload(false)}>Quit</button>
+      <button id = "Quit" onClick={() => window.location.reload(false)}>Quit</button>
     </div>
   );
   function Alert(props) {
