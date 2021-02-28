@@ -23,7 +23,7 @@ function GuessBox(props) {
     <div>
       <h1>{picked ? ` You Guessed ${picked.county} !` : ""}</h1>
 
-      <form onSubmit={submitForm, }>
+      <form onSubmit={submitForm}>
         <select
           name="county"
           value={selected.county && ""}

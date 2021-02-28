@@ -9,23 +9,27 @@ import { useEffect } from "react";
 
 function Map(props) {
   let vtOutline = borderData.geometry.coordinates[0].map(coords => [coords[1], coords[0]])
-  // const [MapZoom, setMapZoom] = useState(8)
+  const [MapZoom, setMapZoom] = useState(8)
   const [location,setLocation]= useState(props.location)
   const [ZoomIn,setZoomIn]= useState(8)
+//  //kkkdss
+//   const [county, setCounty] = useState ("")
+//   const [city, setCity] = useState ("")
   
 let coorMarker = props.Coor
  console.log(coorMarker)
-
+function resetButton(props){
+  console.log('reset button ', props.Coor)
+  // setLocation(props.Coor)
+}
  useEffect(() => {
-   props.startPress ? setLocation(props.Coor)  : setLocation(props.location)
-   props.startPress ? setZoomIn(12): setZoomIn(ZoomIn)
- 
-  
+   props.startPress ? setLocation(props.Coor) : setLocation(props.location)
+   props.startPress ? setZoomIn(12)  : setZoomIn(ZoomIn)
 
-   
  })
  
   return (
+    <div>
     <MapContainer
       center={location}
       zoom={8}
@@ -47,6 +51,8 @@ let coorMarker = props.Coor
         
        <ChangeView center={props.location} zoom={ZoomIn} location={location} /> 
     </MapContainer>
+    <button onClick={resetButton}>reset2</button>
+    </div>
   );
 }
 

@@ -9,16 +9,22 @@ import Map from "./components/Map";
 import Quit from "./components/Quit";
 import Info from "./components/Info";
 import GuessBox from "./components/GuessBox";
+import Answer from "./components/Answer"
 
 function App() {
-
+// each turn Coordinates
   const [Coor, setCoor] = useState([])
+  //start button pressed
   const [startPress, setStartPress] = useState(false)
 
   const [center, setCenter] = useState([43.88, -72.7317])
   const [display, setDisplay] = useState(false);
   const [displayoptions, setDisplayOptions] = useState(false);
   const [rndLocation , setRndLocation]= useState(center)
+
+  //answer var
+  const [county, setCounty] = useState ("")
+  const [city, setCity] = useState ("")
   
 
 
@@ -35,6 +41,8 @@ function App() {
     {display && <Info/>}
       <Map Coor={Coor} center={center} location={rndLocation} startPress={startPress} />
       <StartButton setCoor={setCoor} setStartPress={setStartPress}/>
+      <Answer Coor={Coor} setStartPress={setStartPress} startPress={startPress} setCounty={setCounty} county={county} setCity={setCity} />
+    
       <ReturnButton/>
       <NavBar/>
       <MoveButtons/>

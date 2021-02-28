@@ -11,13 +11,13 @@ import {useState} from 'react'
 function StartButton(props){
 // useEffect to stop looping
 
+const [stopButton, setstopButton] = useState(false)
     function PickSpot(){
 
         // const [Coor, setCoor] = useState([])
     
          
         // //function for on click 
-        
         
         const longMax =  -71.5;
         const longMin = -73.4;
@@ -53,6 +53,8 @@ function StartButton(props){
             mapCoor = [rndLat,rndLong]
             props.setCoor(mapCoor)
             props.setStartPress(true)
+            setstopButton(true)
+
     }
     }
 
@@ -64,7 +66,7 @@ function StartButton(props){
      <div>
     
 
-        <button onClick={PickSpot} >Start</button>
+        <button onClick={PickSpot} disabled={stopButton}>Start</button>
     </div>
     )
 
