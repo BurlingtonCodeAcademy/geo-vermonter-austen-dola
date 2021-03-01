@@ -33,9 +33,9 @@ const [stopButton, setstopButton] = useState(false)
         const borderVt =L.geoJSON(borderData);
         let incArr = leafletPip.pointInLayer(randCoor, borderVt);
         
-        console.log('incArr ',incArr)
+        // console.log('incArr ',incArr)
         // console.log('include Array ',Coor)
-        console.log('coordinates ',randCoor)
+        // console.log('coordinates ',randCoor)
          
       
         //  while loop for randlong/lat in border data

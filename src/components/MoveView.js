@@ -1,21 +1,17 @@
 
 import { useEffect } from "react";
-
-//function for on click
-// reset the map
-// take the intial random coordinates
-
 import { useMap } from "react-leaflet";
-function ReturnButton(props) {
+function MoveView(props) {
   // console.log('Change view')
   const map = useMap();
-     if(props.ReturnLocation === true){
+     if(props.MoveLocation === true){
      
      map.setView(props.location, props.zoom);
+    //  props.setMoveLocation(false)
     }
 
   return null;
 }
 
 
-export default ReturnButton;
+export default MoveView;

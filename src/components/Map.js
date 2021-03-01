@@ -1,9 +1,14 @@
 import { MapContainer, TileLayer, Polygon, Marker, Polyline, useMap } from "react-leaflet";
 import borderData from "../data/border";
-import ChangeView from './ChangeView'
+import ChangeView from './ChangeView';
+import ReturnButton from "./Return"
+import MoveButtons from "./Movement"
+import MoveView from './MoveView'
+import "../App.css";
 
 import { useState } from "react";
 import { useEffect } from "react";
+
 
 
 
@@ -12,25 +17,30 @@ function Map(props) {
   const [MapZoom, setMapZoom] = useState(8)
   const [location,setLocation]= useState(props.location)
   const [ZoomIn,setZoomIn]= useState(8)
+  const [MoveLocation, setMoveLocation] = useState(false)
 //  //kkkdss
 //   const [county, setCounty] = useState ("")
 //   const [city, setCity] = useState ("")
-  
+const [ReturnLocation, setReturnLocation] = useState(false)
 let coorMarker = props.Coor
- console.log(coorMarker)
+//  console.log(coorMarker)
+
 function resetButton(props){
-  console.log('reset button ', props.Coor)
-  // setLocation(props.Coor)
+  setReturnLocation(true)
+  console.log('return button')
+ 
 }
  useEffect(() => {
    props.startPress ? setLocation(props.Coor) : setLocation(props.location)
    props.startPress ? setZoomIn(12)  : setZoomIn(ZoomIn)
-
+  
  })
+
+
  
   return (
-    <div>
-    <MapContainer
+    <div id='map-body'>
+    <MapContainer id='map'
       center={location}
       zoom={8}
       
@@ -48,10 +58,15 @@ function resetButton(props){
       <Polygon
         positions={vtOutline}
         pathOptions={{ color: "orange", fillOpacity: 0 }}></Polygon>
-        
        <ChangeView center={props.location} zoom={ZoomIn} location={location} /> 
+        <ReturnButton center={props.location} zoom={ZoomIn} location={location} ReturnLocation={ReturnLocation}/>
+      <MoveView center={props.location} zoom={ZoomIn} location={location} MoveLocation={MoveLocation} setMoveLocation={setMoveLocation} startPress={props.startPress} />
     </MapContainer>
-    <button onClick={resetButton}>reset2</button>
+    
+    <MoveButtons location={location} setLocation={setLocation} setReturnLocation={setReturnLocation} setMoveLocation={setMoveLocation}/>
+    <button onClick={resetButton}>Return</button>
+    {console.log("location is",location)}
+   
     </div>
   );
 }

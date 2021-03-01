@@ -40,7 +40,7 @@ function Answer(props) {
           //     props.setCity(jsonObj.address.village);
           //     console.log(`village is ${jsonObj.address.village}`)
           // }
-      console.log("Address ",Address)
+      // console.log("Address ",Address)
       // if (jsonObj.address.county){
         //   props.setCounty(jsonObj.address.county);
         //   console.log(`County is ${jsonObj.address.county}`)
@@ -55,7 +55,7 @@ function Answer(props) {
         
       }
       
-      console.log("Address 2",Address)
+      // console.log("Address 2",Address)
   });
   return (null)
 }

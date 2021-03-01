@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import StartButton from "./components/Start";
-import ReturnButton from "./components/Return";
+// import ReturnButton from "./components/Return";
 import NavBar from "./components/Nav";
 import MoveButtons from "./components/Movement";
 import GuessButton from "./components/GuessButton";
@@ -22,6 +22,7 @@ function App() {
   const [displayoptions, setDisplayOptions] = useState(false);
   const [rndLocation , setRndLocation]= useState(center)
 
+ 
   //answer var
   const [county, setCounty] = useState ("")
   const [city, setCity] = useState ("")
@@ -29,7 +30,7 @@ function App() {
 
 
   return (
-    <div>
+    <div id='main-body'>
       <button
       
       onClick={(evt) => {
@@ -43,10 +44,10 @@ function App() {
       <StartButton setCoor={setCoor} setStartPress={setStartPress}/>
       <Answer Coor={Coor} setStartPress={setStartPress} startPress={startPress} setCounty={setCounty} county={county} setCity={setCity} />
     
-      <ReturnButton/>
+   
       <NavBar/>
-      <MoveButtons/>
       <Quit/> 
+      {/* <MoveButtons/> */}
   
   
       

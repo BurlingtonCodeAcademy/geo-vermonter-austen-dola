@@ -5,7 +5,7 @@ import { useMap } from "react-leaflet";
 
 
 function ChangeView(props){
-console.log('Change view')
+// console.log('Change view')
 const map = useMap();
    
         map.setView(props.location,props.zoom);
