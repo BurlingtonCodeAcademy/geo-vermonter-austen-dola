@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: red;
+
+}
+body{
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  font-family: Arial;
+  
+  margin-left: 30%;
+  margin-top: 5%
+}
+ 
+
+button:hover{
+  background-color: black;
+}
+#Start{
+  margin-right:1200px;
+  width: 100px;
+  height: 50px;
+  font-size:45px;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.north{
+  grid-area: 1/2/2/3;
+  /* width: 50px;
+  height: 50px; */
+  /* display: flex;
+  justify-content: space-around; */
+  font-size:25px;
+  /* Margin-left: 700px;
+  Margin-top: -10% */
+}
+.west{
+  grid-area: 2/1/3/2;
+  /* width: 50px;
+  height: 50px; */
+  /* display: flex;
+  justify-content: space-around; */
+  font-size:25px;
+  /* Margin-left: 650px;
+  Margin-top: -4% */
+
+}
+.east{
+  grid-area: 2/3/3/4;
+  /* width: 50px;
+  height: 50px; */
+  /* display: flex;
+  justify-content: space-around; */
+  font-size:25px;
+  /* Margin-left: 650px;
+  Margin-top: -4% */
+
+}
+ 
+
+.south{
+  grid-area: 3/2/3/3;
+  /* width: 50px;
+  height: 50px; */
+  /* display: flex;
+  justify-content: space-around; */
+  font-size: 25px;
+  /* Margin-left: 700px;
+  Margin-top: -30% */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+#Quit{
+  
+  width: 100px;
+  height: 50px;
+  font-size:45px;
+  
+  Margin-left: 500px;
+  margin-top: 260px
+}
+
+
+
+
+#Guess{
+  width: 100px;
+  height: 50px;
+  font-size:20px;
+  
+  Margin-left: 250px;
+  margin-top: -500px
+ 
+}
+
+#Return{
+
+
+    display:flex;
+    justify-content: space-between;
+    width: 115px;
+    height: 50px;
+    font-size:40px;
+    
+    Margin-left: 700px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* #main-body{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+} */
+#map-body{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-
-.App-link {
-  color: #61dafb;
+#map{
+  display: block;
+  z-index: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#Movements{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr ;
+  margin-top: -120px;
+  margin-left: 58%;
+  margin-bottom: 25px;
+  z-index: 5;
 }
