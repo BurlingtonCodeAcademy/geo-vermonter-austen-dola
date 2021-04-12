@@ -7,6 +7,7 @@ const borderData = {
     "latitude": 44.0886,
     "longitude": -72.7317
   },
+  //All coordinates for the VT borders
   "geometry": {
     "type": "Polygon",
     "coordinates": [

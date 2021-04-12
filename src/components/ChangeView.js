@@ -1,16 +1,13 @@
+//this page is to change the view of the zoomed in map
+//imported dependencies
 import { useEffect } from "react";
-
-
 import { useMap } from "react-leaflet";
 
+function ChangeView(props) {
+  const map = useMap();
 
-function ChangeView(props){
-// console.log('Change view')
-const map = useMap();
-   
-        map.setView(props.location,props.zoom);
+  map.setView(props.location, props.zoom);
 
-    return null;
-
+  return null;
 }
-export default ChangeView
+export default ChangeView;

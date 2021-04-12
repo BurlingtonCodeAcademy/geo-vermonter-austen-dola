@@ -1,21 +1,20 @@
 //Header containing Placeholder pages (Score, About)
-
-function HighScore(){
-    //shows high score
+// Highscore function
+function HighScore() {
+  //shows high score
 }
-function About(){
-    //shows about page
+// About function
+function About() {
+  //shows about page
 }
 
-
-function NavBar(){
-
-
-    return(
-        <div id = "Nav">
-        <button onClick={HighScore} >High Score</button>
-        <button onClick={About}>About</button>
-        </div>
-    )
+// this function is what holds the buttons to check your highscore and other info about your current game
+function NavBar() {
+  return (
+    <div id="Nav">
+      <button onClick={HighScore}>High Score</button>
+      <button onClick={About}>About</button>
+    </div>
+  );
 }
-export default NavBar
+export default NavBar;

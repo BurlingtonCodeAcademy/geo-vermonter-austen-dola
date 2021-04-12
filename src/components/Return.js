@@ -1,4 +1,4 @@
-
+// imported dependencies
 import { useEffect } from "react";
 
 //function for on click
@@ -6,16 +6,14 @@ import { useEffect } from "react";
 // take the intial random coordinates
 
 import { useMap } from "react-leaflet";
+//this is being used to return the user to their starting location
 function ReturnButton(props) {
-  // console.log('Change view')
   const map = useMap();
-     if(props.ReturnLocation === true){
-     
-     map.setView(props.location, props.zoom);
-    }
+  if (props.ReturnLocation === true) {
+    map.setView(props.location, props.zoom);
+  }
 
   return null;
 }
-
 
 export default ReturnButton;
